@@ -11,10 +11,12 @@ export function length() {
     return array.length;
 }
 
-export function pop(array) {
-    const param = array[array.length - 1];
+export function pop(array, item) {
+    item = array[array.length - 1];
     array.length = array.length - 1;
-    return param;
+    return item;
 }
-
-export function shift() {}
+export function shift(array, item) {
+    item = array[0];
+    return item;
+}
