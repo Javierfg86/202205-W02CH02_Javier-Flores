@@ -20,3 +20,21 @@ export function shift(array, item) {
     item = array[0];
     return item;
 }
+export function unshift(array, item) {
+    const temp = [item];
+    array = [...temp, ...array];
+
+    return array.length;
+}
+export function join(array) {
+    array = String(array);
+    return array;
+}
+
+export function some(array, item) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === item) {
+            return true;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import { push, length, pop, shift } from './methods.js';
+import { push, length, pop, shift, unshift, join, some } from './methods.js';
 
 describe('Given push function', () => {
     describe('When it is run with 0', () => {
@@ -65,6 +65,42 @@ describe('Given shift function', () => {
             const array = [1, 2];
             const result = shift(array);
             expect(result).toBe(1);
+        });
+    });
+});
+describe('Given unshift function', () => {
+    describe('When add 3 to [1,2]', () => {
+        test('Then it should return 3', () => {
+            const array = [1, 2];
+            const item = 3;
+            const result = unshift(array, item);
+            expect(result).toBe(3);
+        });
+    });
+});
+describe('Given join function', () => {
+    describe('When it is run an array', () => {
+        test('Then it should return a string', () => {
+            const aData = [];
+            const result = join(aData);
+            expect(result).toBe('');
+        });
+    });
+});
+describe('When it is run [1,2,3]', () => {
+    test('Then it should return "1,2,3"', () => {
+        const aData = [1, 2, 3];
+        const result = join(aData);
+        expect(result).toBe('1,2,3');
+    });
+});
+describe('Given some function', () => {
+    describe('When [1,2,3] includes 3 value', () => {
+        test('Then it should return true', () => {
+            const aData = [1, 2, 3];
+            const item = 3;
+            const result = some(aData, item);
+            expect(result).toBe(true);
         });
     });
 });
