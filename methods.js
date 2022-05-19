@@ -15,8 +15,7 @@ export function pop(array) {
     return result;
 }
 export function shift(array) {
-    const result = array[0];
-    return result;
+    return array[0];
 }
 export function unshift(array, item) {
     const temp = [item];
