@@ -1,13 +1,11 @@
 // eslint-disable-next-line prefer-const
-let array;
 
 export function push(array, item) {
     array[array.length] = item;
     return array.length;
 }
-push(array, 0);
 
-export function length() {
+export function length(array) {
     return array.length;
 }
 
