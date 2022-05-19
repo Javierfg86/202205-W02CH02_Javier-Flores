@@ -1,5 +1,5 @@
 // eslint-disable-next-line prefer-const
-const array = [];
+let array;
 
 export function push(array, item) {
     array[array.length] = item;
@@ -11,14 +11,14 @@ export function length() {
     return array.length;
 }
 
-export function pop(array, item) {
-    item = array[array.length - 1];
+export function pop(array) {
+    const result = array[array.length - 1];
     array.length = array.length - 1;
-    return item;
+    return result;
 }
-export function shift(array, item) {
-    item = array[0];
-    return item;
+export function shift(array) {
+    const result = array[0];
+    return result;
 }
 export function unshift(array, item) {
     const temp = [item];
